@@ -19,36 +19,36 @@ gulp.task('Less', function () {
 
 //压缩javascript 文件，压缩后文件放入build/js下   
 gulp.task('minifyjs',function(){
-    gulp.src('js/*.js')
+    gulp.src('src/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./js/min'))
+    .pipe(gulp.dest('./src/js/min'))
 });
 
 //合并build/js文件夹下的所有javascript 文件为一个main.js放入build/js下   
 gulp.task('alljs', function() {
-  return gulp.src('./js/min/*.js')
+  return gulp.src('./src/js/min/*.js')
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./asset/js'));
 });
 
 //重命名project.md 文件
 gulp.task('rename', function() {
   return gulp.src("./Project.md")
       .pipe(rename("README.md"))
-      .pipe(gulp.dest("./build"));
+      .pipe(gulp.dest("./asset"));
 });
 
 //将相关项目文件复制到build 文件夹下
 gulp.task('buildfiles', function() {
    //根目录文件
-   gulp.src('./*.{php,html,css,png}')
-   .pipe(gulp.dest('./build'));
+   gulp.src('./src/*.{php,html,css,png}')
+   .pipe(gulp.dest('./asset'));
    //CSS文件
    gulp.src('./src/css/*')
-   .pipe(gulp.dest('./build/css'));
+   .pipe(gulp.dest('./asset/css'));
     //图片文件
-   gulp.src('./images/*')
-   .pipe(gulp.dest('./build/images'));
+   gulp.src('./src/images/*')
+   .pipe(gulp.dest('./asset/images'));
 });
 
 //压缩图片 - tinypng
