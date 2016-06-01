@@ -71,3 +71,4 @@ a{text-decoration:none; color:#8B8B8B; font-family: Hiragino Sans GB(W3),Hiragin
 a:hover{text-decoration:none;}
 ul,ol{list-style:none;}
 *{box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+html{font-size: 24px;}

@@ -132,6 +132,11 @@ label {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
+.btn-option {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
 .btn {
   display: inline-block;
   padding: 0.1rem 0.5rem;
@@ -159,6 +164,9 @@ label {
 [data-dpr="3"] .btn {
   font-size: 42px;
 }
+.btns {
+  padding: 0.05rem 0.25rem;
+}
 .memberSelect:after {
   content: ".";
   display: block;
@@ -169,4 +177,7 @@ label {
 .btnBox {
   margin-top: 0.4rem;
   text-align: center;
+}
+.panel {
+  clear: both;
 }
